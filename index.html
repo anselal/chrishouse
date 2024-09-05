@@ -12,6 +12,55 @@
             padding: 0;
             color: #333;
         }
+
+        /* Top Navigation */
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+        }
+
+        nav .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #f5a623;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        nav .contact-info {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .contact-info a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #f5a623;
+        }
+
+        /* Hero Section */
         header {
             background-image: url('hero-image.jpg'); /* Add your hero image here */
             background-size: cover;
@@ -22,14 +71,18 @@
             align-items: center;
             text-align: center;
             color: #fff;
+            padding-top: 60px;
         }
+
         header h1 {
             font-size: 4rem;
             margin: 0;
         }
+
         header p {
             font-size: 1.5rem;
         }
+
         header a {
             display: inline-block;
             background-color: #f5a623;
@@ -40,62 +93,105 @@
             margin-top: 20px;
             font-size: 1.2rem;
         }
+
+        /* General Sections */
         section {
             padding: 60px 20px;
             text-align: center;
         }
+
         section h2 {
             font-size: 2.5rem;
             color: #f5a623;
         }
+
         section p {
             font-size: 1.2rem;
             max-width: 800px;
             margin: 20px auto;
         }
+
+        /* Gallery */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
         .gallery img {
             width: 100%;
             max-width: 300px;
             height: auto;
-            margin: 10px;
+            border-radius: 5px;
         }
+
+        /* Pricing Table */
         .pricing-table {
             margin: 40px auto;
             max-width: 800px;
         }
+
         .pricing-table table {
             width: 100%;
             border-collapse: collapse;
         }
+
         .pricing-table th, .pricing-table td {
             padding: 15px;
             border: 1px solid #ddd;
             text-align: left;
         }
+
         .pricing-table th {
             background-color: #f5a623;
             color: #fff;
         }
+
+        /* Footer */
         footer {
             background-color: #333;
             color: #fff;
             padding: 20px;
             text-align: center;
         }
+
         footer a {
             color: #f5a623;
             text-decoration: none;
         }
+
+        /* Scroll Smooth */
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Top Navigation Menu -->
+    <nav>
+        <div class="logo">Georgia Villa</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#accommodation">Accommodation</a></li>
+            <li><a href="#courtyard">Courtyard & Facilities</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="contact-info">
+            <a href="mailto:info@georgia-villa.com">info@georgia-villa.com</a>
+            <a href="tel:+301234567890">+30 123 456 7890</a>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
     <header>
         <div>
             <h1>Welcome to Georgia Villa – Chris House</h1>
             <p>A Tranquil Escape by the Sea</p>
-            <a href="#book-now">Book Your Stay</a>
+            <a href="#pricing">Book Your Stay</a>
         </div>
     </header>
 
@@ -103,47 +199,36 @@
     <section id="about">
         <h2>About the Villa</h2>
         <p>
-            Nestled in a newly built settlement near Nea Moudania, Georgia Villa – Chris House offers a serene retreat just a minute's walk from Portaria Beach. 
-            Our modern villa, with its impressive architecture and spacious interiors, provides the perfect setting for relaxation and rejuvenation.
+            Villa Georgia-Chris House is located on Portaria Beach, in a newly built settlement just a stone's throw from Nea Moudania. Built with insulating materials on the main road, 
+            it features a front garden, a swing for children, and small plane trees at the parking. Just a 1-minute walk from the clean sandy beach, it offers guests tranquility and 
+            an absolute energy recharge.
         </p>
     </section>
 
     <!-- Accommodation Section -->
     <section id="accommodation">
-        <h2>Our Accommodation</h2>
+        <h2>Accommodation</h2>
+        <p>We offer a variety of accommodation options:</p>
         <div class="gallery">
-            <img src="ground-floor.jpg" alt="Ground Floor Apartment">
-            <img src="second-floor.jpg" alt="Second Floor Apartment">
-            <img src="ground-house.jpg" alt="Ground-Level House">
+            <img src="ground-floor-apartment.jpg" alt="Ground Floor Apartment">
+            <img src="second-floor-apartment.jpg" alt="Second Floor Apartment">
+            <img src="ground-level-house.jpg" alt="Ground-Level House">
         </div>
-        <p>
-            Explore our wide range of accommodation options, from spacious apartments to cozy ground-level houses. All units are designed with comfort and elegance.
-        </p>
+        <p>Ground Floor Apartments include 2 double beds, 1 single bed, a sofa, and a dining table for 5 with a spacious balcony. The second-floor apartments feature additional attic space and two balconies, while the ground-level house offers 2 single beds, a dining area, and a lovely balcony.</p>
     </section>
 
     <!-- Courtyard & Facilities Section -->
-    <section id="facilities">
-        <h2>Relax in Our Beautiful Courtyard</h2>
+    <section id="courtyard">
+        <h2>Courtyard & Facilities</h2>
         <p>
-            Our courtyard is a gem, featuring a rustic gazebo, a barbecue, vine-covered shade, and plenty of seating for relaxation. It’s the perfect place to unwind with your loved ones.
+            The courtyard is paved with stone and tiles, featuring a rustic gazebo, a barbecue, a vine providing thick shade, a bench, chairs, small cypress trees, and many potted plants.
         </p>
-        <div class="gallery">
-            <img src="courtyard.jpg" alt="Courtyard">
-            <img src="gazebo.jpg" alt="Gazebo">
-        </div>
-    </section>
-
-    <!-- Amenities Section -->
-    <section id="amenities">
-        <h2>Top-Notch Amenities</h2>
-        <p>
-            At Georgia Villa, we ensure that all your needs are met with high-quality amenities such as WLAN, laundry services, fresh towels, and air conditioning (with separate metering).
-        </p>
+        <p>We also offer high-quality amenities such as WLAN, a shared laundry machine, bath towels, air conditioning with a metered charge (0.30€/1kWh), and more.</p>
     </section>
 
     <!-- Pricing Section -->
     <section id="pricing">
-        <h2>Check Our Rates</h2>
+        <h2>Pricing</h2>
         <div class="pricing-table">
             <table>
                 <thead>
@@ -164,11 +249,41 @@
                         <td>90€</td>
                         <td>60€</td>
                     </tr>
-                    <!-- Add more rows as necessary -->
+                    <tr>
+                        <td>1/6 – 20/6</td>
+                        <td>100€</td>
+                        <td>60€</td>
+                    </tr>
+                    <tr>
+                        <td>20/6 – 30/6</td>
+                        <td>110€</td>
+                        <td>65€</td>
+                    </tr>
+                    <tr>
+                        <td>1/7 – 10/7</td>
+                        <td>120€</td>
+                        <td>70€</td>
+                    </tr>
+                    <tr>
+                        <td>10/7 – 20/8</td>
+                        <td>135€</td>
+                        <td>85€</td>
+                    </tr>
+                    <!-- Add more rows if needed -->
                 </tbody>
             </table>
         </div>
-        <a id="book-now" href="mailto:info@georgia-villa.com">Check Availability & Book Now</a>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="courtyard-1.jpg" alt="Courtyard">
+            <img src="beach-sunset.jpg" alt="Sunset by the Beach">
+            <img src="villa-architecture.jpg" alt="Villa Architecture">
+            <img src="barbecue-area.jpg" alt="Barbecue Area">
+        </div>
     </section>
 
     <!-- Contact Section -->
