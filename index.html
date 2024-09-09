@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Georgia Villa – Chris House: A tranquil escape by the sea. Enjoy modern accommodations and a beautiful courtyard.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Georgia Villa – Chris House: A tranquil escape by the sea. Enjoy modern accommodations and a beautiful courtyard." />
+    <meta name="keywords" content="villa, Greece, Portaria Beach, vacation, seaside, accommodation" />
     <title>Georgia Villa – Chris House</title>
     <style>
         body {
@@ -37,6 +40,7 @@
         nav ul {
             display: flex;
             list-style: none;
+            margin-right: auto;
         }
 
         nav ul li {
@@ -49,9 +53,17 @@
             font-size: 1rem;
         }
 
+        nav ul li a.active {
+            color: #f5a623;
+            /* Highlight active section */
+            font-weight: bold;
+        }
+
         nav .contact-info {
             display: flex;
             align-items: center;
+            margin-left: auto;
+            padding-right: 40px;
         }
 
         nav .contact-info a {
@@ -60,11 +72,107 @@
             color: #f5a623;
         }
 
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            position: absolute;
+            left: 10px;
+            top: 15px;
+        }
+
+        .hamburger span {
+            height: 3px;
+            width: 25px;
+            background-color: #333;
+            margin-bottom: 4px;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            nav .logo {
+                padding-left: 25px;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #fff;
+                border-top: 1px solid #ddd;
+                z-index: 998;
+                /* Ensure menu is above the overlay */
+            }
+
+            nav ul li {
+                margin-left: 0;
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .contact-info {
+                display: flex;
+                flex-direction: column;
+                /* Stack email and phone vertically */
+                align-items: flex-start;
+                /* Align them to the left */
+                padding-right: 0;
+                word-wrap: break-word;
+                /* Ensure long email breaks into multiple lines */
+                overflow-wrap: break-word;
+                /* Supports breaking for older browsers */
+                max-width: 100%;
+                /* Ensure contact info doesn't go outside the screen */
+            }
+
+            .contact-info a {
+                margin-left: 0;
+                margin-bottom: 10px;
+                /* Add spacing between email and phone */
+                word-wrap: break-word;
+                /* Break long words like email */
+                overflow-wrap: break-word;
+                max-width: 100%;
+                /* Ensure it fits within the screen */
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            /* Overlay when menu is visible */
+            .menu-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                display: none;
+                z-index: 997;
+                /* Behind the menu */
+            }
+
+            .menu-overlay.show {
+                display: block;
+            }
+        }
+
         /* Hero Section */
         header {
-            background-image: url('assets/img/hero-image.jpg'); /* Hero image path */
+            position: relative;
+            background-image: url("assets/img/hero-image.jpg");
             background-size: cover;
-            background-position: center;
+            background-position: center center;
+            background-attachment: fixed;
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -72,6 +180,22 @@
             text-align: center;
             color: #fff;
             padding-top: 60px;
+        }
+
+        /* Dark overlay for hero text */
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        header div {
+            z-index: 2;
         }
 
         header h1 {
@@ -94,6 +218,21 @@
             font-size: 1.2rem;
         }
 
+        header a:hover {
+            background-color: #333;
+            color: #f5a623;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+            }
+        }
+
         /* General Sections */
         section {
             padding: 60px 20px;
@@ -111,19 +250,99 @@
             margin: 20px auto;
         }
 
-        /* Gallery */
-        .gallery {
+        /* Accommodation Gallery */
+        .gallery-accommodation {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
         }
 
-        .gallery img {
+        .gallery-accommodation img {
             width: 100%;
             max-width: 300px;
             height: auto;
             border-radius: 5px;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 1000;
+        }
+
+        .lightbox-content {
+            max-width: 80%;
+            max-height: 70%;
+            margin: 20px;
+        }
+
+        .description {
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 10px 0;
+            max-width: 80%;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+            z-index: 1001;
+        }
+
+        .prev {
+            left: 20px;
+        }
+
+        .next {
+            right: 20px;
         }
 
         /* Pricing Table */
@@ -137,7 +356,8 @@
             border-collapse: collapse;
         }
 
-        .pricing-table th, .pricing-table td {
+        .pricing-table th,
+        .pricing-table td {
             padding: 15px;
             border: 1px solid #ddd;
             text-align: left;
@@ -148,12 +368,17 @@
             color: #fff;
         }
 
+        .pricing-table tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
         /* Footer */
         footer {
             background-color: #333;
             color: #fff;
             padding: 20px;
             text-align: center;
+            margin-top: auto;
         }
 
         footer a {
@@ -165,26 +390,39 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* Responsive Map */
+        iframe {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
-<body>
 
+<body>
     <!-- Top Navigation Menu -->
     <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <div class="logo">Georgia Villa</div>
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#accommodation">Accommodation</a></li>
-            <li><a href="#courtyard">Courtyard & Facilities</a></li>
+            <li><a href="#facilities">Facilities & Amenities</a></li>
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="contact-info">
-            <a href="mailto:info@georgia-villa.com">info@georgia-villa.com</a>
-            <a href="tel:+301234567890">+30 123 456 7890</a>
+            <a href="mailto:tzelepischristos83@gmail.com">tzelepischristos83@gmail.com</a>
+            <a href="tel:+301234567890">+49 1520 49 27 454 </a>
         </div>
     </nav>
+
+    <div class="menu-overlay" id="menu-overlay"></div>
 
     <!-- Hero Section -->
     <header>
@@ -199,9 +437,35 @@
     <section id="about">
         <h2>About the Villa</h2>
         <p>
-            Villa Georgia-Chris House is located on Portaria Beach, in a newly built settlement just a stone's throw from Nea Moudania. Built with insulating materials on the main road, 
-            it features a front garden, a swing for children, and small plane trees at the parking. Just a 1-minute walk from the clean sandy beach, it offers guests tranquility and 
-            an absolute energy recharge.
+            Villa Georgia-Chris House is located on Portaria Beach, in a newly built settlement just a stone's throw
+            from Nea Moudania. Built with insulating materials on the main road, it features a front garden, a swing for
+            children,
+            and small plane trees at the parking. Just a 1-minute walk from the clean sandy beach, it offers guests
+            tranquility and an absolute energy recharge.
+        </p>
+        <p>
+            At dusk, during sunset when the sea turns red, and a little later when night falls and the moon touches and
+            reflects on its calm surface –yes , this magical dream touches the depths of the visitor’s soul, offering
+            relief,
+            relaxation, and a profound sense of the essence of life.
+        </p>
+        <p>
+            The architecture of the Villa is modern, impressive, with spacious and open areas where no-one can feel
+            cramped. The facade is double-sided, facing both east and west. The balconies on the second floor are wide,
+            with a
+            stunning panoramic view, where there is always a breeze. The staircase is made of white marble, while the
+            floors and bathrooms are tiled with granite. On this floor, a beautiful and comfortable maisonette is
+            formed, together
+            with the attic. The romantic fireplace is luxurious and beautiful, and the kitchen is fully equipped. There
+            are plenty of single and double beds, while the front doors are armored, thus ensuring security.
+        </p>
+        <p>
+            On the ground floor, the apartments are very practical, elegant, and conveniently arranged; they are
+            spacious and without stairs, making them ideal for people with mobility difficulties.
+        </p>
+        <p>
+            Additionally, on the ground floor, there is a residence with a fully equipped kitchen, a bathroom with a
+            shower, a dining area, 2 single beds, and a sofa in the outdoor area.
         </p>
     </section>
 
@@ -209,26 +473,51 @@
     <section id="accommodation">
         <h2>Accommodation</h2>
         <p>We offer a variety of accommodation options:</p>
-        <div class="gallery">
-            <img src="assets/img/ground-floor-apartment.jpg" alt="Ground Floor Apartment">
-            <img src="assets/img/second-floor-apartment.jpg" alt="Second Floor Apartment">
-            <img src="assets/img/ground-level-house.jpg" alt="Ground-Level House">
+        <div class="gallery-accommodation">
+            <img src="assets/img/ground-floor-apartment.jpg" alt="Ground Floor Apartment" loading="lazy" />
+            <img src="assets/img/second-floor-apartment.jpg" alt="Second Floor Apartment" loading="lazy" />
+            <img src="assets/img/ground-level-house.jpg" alt="Ground-Level House" loading="lazy" />
         </div>
-        <p>Ground Floor Apartments include 2 double beds, 1 single bed, a sofa, and a dining table for 5 with a spacious balcony. The second-floor apartments feature additional attic space and two balconies, while the ground-level house offers 2 single beds, a dining area, and a lovely balcony.</p>
+        <p>
+            Ground Floor Apartments include 2 double beds, 1 single bed, a sofa, and a dining table for 5 with a
+            spacious balcony. The second-floor apartments feature additional attic space and two balconies, while the
+            ground-level
+            house offers 2 single beds, a dining area, and a lovely balcony.
+        </p>
     </section>
 
-    <!-- Courtyard & Facilities Section -->
-    <section id="courtyard">
-        <h2>Courtyard & Facilities</h2>
+    <!-- Facilities & Amenities Section -->
+    <section id="facilities">
+        <h2>Facilities & Amenities</h2>
         <p>
-            The courtyard is paved with stone and tiles, featuring a rustic gazebo, a barbecue, a vine providing thick shade, a bench, chairs, small cypress trees, and many potted plants.
+            The courtyard is paved with stone and tiles, featuring a rustic gazebo, a barbecue, a vine providing thick
+            shade, a bench, chairs, small cypress trees, and many potted plants.
         </p>
-        <p>We also offer high-quality amenities such as WLAN, a shared laundry machine, bath towels, air conditioning with a metered charge (0.30€/1kWh), and more.</p>
+        <p>
+            We also offer high-quality amenities such as WLAN, a shared laundry machine, bath towels, face towels and
+            kitchen towels, bed sheets, blankets and summer duvets, air conditioning with a metered charge (0.30€/1kWh),
+            and more.
+        </p>
     </section>
 
     <!-- Pricing Section -->
     <section id="pricing">
         <h2>Pricing</h2>
+        <p>
+            4 Apartments and 1 Room, Studio
+        </p>
+        <p>
+            Apartments (4 people) per night
+        </p>
+        <p>
+            Price: from 80€ to 135€ circa
+        </p>
+        <p>
+            Ground Floor Studio Residence (2 people)
+        </p>
+        <p>
+            Price: 50€ – 85€ (approximately 40% cheaper than the apartment prices)
+        </p>
         <div class="pricing-table">
             <table>
                 <thead>
@@ -241,64 +530,216 @@
                 <tbody>
                     <tr>
                         <td>1/5 – 20/5</td>
-                        <td>80€</td>
-                        <td>50€</td>
+                        <td>80€ / day</td>
+                        <td>50€ / day</td>
                     </tr>
                     <tr>
                         <td>20/5 – 30/5</td>
-                        <td>90€</td>
-                        <td>60€</td>
+                        <td>90€ / day</td>
+                        <td>60€ / day</td>
                     </tr>
                     <tr>
                         <td>1/6 – 20/6</td>
-                        <td>100€</td>
-                        <td>60€</td>
+                        <td>100€ / day</td>
+                        <td>60€ / day</td>
                     </tr>
                     <tr>
                         <td>20/6 – 30/6</td>
-                        <td>110€</td>
-                        <td>65€</td>
+                        <td>110€ / day</td>
+                        <td>70€ / day</td>
                     </tr>
                     <tr>
                         <td>1/7 – 10/7</td>
-                        <td>120€</td>
-                        <td>70€</td>
+                        <td>120€ / day</td>
+                        <td>75€ / day</td>
                     </tr>
                     <tr>
                         <td>10/7 – 20/8</td>
-                        <td>135€</td>
-                        <td>85€</td>
+                        <td>135€ / day</td>
+                        <td>85€ / day</td>
                     </tr>
-                    <!-- Add more rows if needed -->
+                    <tr>
+                        <td>20/8 – 30/8</td>
+                        <td>120€ / day</td>
+                        <td>75€ / day</td>
+                    </tr>
+                    <tr>
+                        <td>1/9 – 10/9</td>
+                        <td>110€ / day</td>
+                        <td>70€ / day</td>
+                    </tr>
+                    <tr>
+                        <td>10/9 – 30/9</td>
+                        <td>95€ / day</td>
+                        <td>60€ / day</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
+        <p>
+            The air conditioning is charged extra at 0.30€/1kWh, and each apartment has a separate meter.
+        </p>
     </section>
 
-    <!-- Photo Gallery Section -->
+    <!-- Gallery Section -->
     <section id="gallery">
-        <h2>Gallery</h2>
+        <h2>Photo Gallery</h2>
         <div class="gallery">
-            <img src="assets/img/courtyard-1.jpg" alt="Courtyard">
-            <img src="assets/img/beach-sunset.jpg" alt="Sunset by the Beach">
-            <img src="assets/img/villa-architecture.jpg" alt="Villa Architecture">
-            <img src="assets/img/barbecue-area.jpg" alt="Barbecue Area">
+            <img src="assets/img/villa-front.jpg" alt="Villa Front" data-index="0" data-description="Villa Front View"
+                onclick="openLightbox(this)" />
+            <img src="assets/img/courtyard.jpg" alt="Courtyard" data-index="1"
+                data-description="Courtyard Area with Stone Pavement" onclick="openLightbox(this)" />
+            <img src="assets/img/barbecue-area.jpg" alt="Barbecue Area" data-index="2"
+                data-description="Barbecue Area with Shaded Gazebo" onclick="openLightbox(this)" />
+            <img src="assets/img/ground-floor-apartment.jpg" alt="Ground Floor Apartment"
+                data-description="Ground Floor Apartment" data-index="3" onclick="openLightbox(this)" />
+            <img src="assets/img/second-floor-apartment.jpg" alt="Second Floor Apartment"
+                data-description="Second Floor Apartment" data-index="4" onclick="openLightbox(this)" />
+            <img src="assets/img/ground-level-house.jpg" alt="Ground-Level House" data-index="5"
+                data-description="Ground-Level House" onclick="openLightbox(this)" />
+        </div>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-img" class="lightbox-content" alt="Lightbox Image" />
+            <p id="lightbox-description" class="description"></p>
+            <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+            <span class="next" onclick="changeImage(1)">&#10095;</span>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2>Get in Touch</h2>
-        <p>Email: <a href="mailto:info@georgia-villa.com">info@georgia-villa.com</a></p>
-        <p>Phone: +30 123 456 7890</p>
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:tzelepischristos83@gmail.com">tzelepischristos83@gmail.com</a></p>
+        <p>Phone: +49 1520 49 27 454</p>
         <p>Address: Portaria Beach, Nea Moudania, Greece</p>
-        <iframe src="https://www.google.com/maps/embed?pb=PLACEHOLDER" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3045.2067298335537!2d23.257417165128025!3d40.24893673271177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a87b05601d0e1f%3A0x50de8472244dcbdb!2sGeorgina%20Villa%20and%20Chris%20Home!5e0!3m2!1sel!2sgr!4v1725521039747!5m2!1sel!2sgr"
+            width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Georgia Villa – Chris House | <a href="#about">About</a> | <a href="#accommodation">Accommodation</a> | <a href="#pricing">Pricing</a> | <a href="#contact">Contact</a></p>
+        <p>&copy; 2024 Georgia Villa – Chris House | <a href="#about">About</a> | <a
+                href="#accommodation">Accommodation</a> | <a href="#pricing">Pricing</a> | <a
+                href="#contact">Contact</a></p>
     </footer>
 
+    <script>
+        // Toggle Menu
+        function toggleMenu() {
+            const navUl = document.querySelector("nav ul");
+            const overlay = document.getElementById("menu-overlay");
+            navUl.classList.toggle("show");
+            overlay.classList.toggle("show");
+        }
+
+        // Close menu when clicking a link
+        document.querySelectorAll("nav ul li a").forEach((link) => {
+            link.addEventListener("click", () => {
+                document.querySelector("nav ul").classList.remove("show");
+                document.getElementById("menu-overlay").classList.remove("show");
+            });
+        });
+
+        // Highlight the active section link in the navigation menu
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll("nav ul li a");
+
+            function removeActiveClass() {
+                navLinks.forEach((link) => link.classList.remove("active"));
+            }
+
+            function addActiveClass(sectionId) {
+                removeActiveClass();
+                const activeLink = document.querySelector(`nav ul li a[href="#${sectionId}"]`);
+                if (activeLink) activeLink.classList.add("active");
+            }
+
+            window.addEventListener("scroll", () => {
+                let currentSection = "";
+                const scrollPosition = window.pageYOffset + window.innerHeight;
+
+                sections.forEach((section, index) => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+
+                    if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+                        currentSection = section.getAttribute("id");
+                    }
+
+                    if (scrollPosition >= document.body.scrollHeight && index === sections.length - 1) {
+                        currentSection = section.getAttribute("id");
+                    }
+                });
+
+                if (currentSection) {
+                    addActiveClass(currentSection);
+                }
+            });
+        });
+
+        // Lightbox functionality
+        var currentIndex = 0;
+        var galleryImages = document.querySelectorAll(".gallery img");
+
+        function openLightbox(img) {
+            var lightbox = document.getElementById("lightbox");
+            var lightboxImg = document.getElementById("lightbox-img");
+            var lightboxDescription = document.getElementById("lightbox-description");
+
+            currentIndex = parseInt(img.getAttribute("data-index"));
+
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
+            lightboxDescription.textContent = img.getAttribute("data-description");
+
+            document.addEventListener("keydown", handleKeyPress);
+        }
+
+        function changeImage(direction) {
+            currentIndex += direction;
+
+            if (currentIndex < 0) {
+                currentIndex = galleryImages.length - 1;
+            } else if (currentIndex >= galleryImages.length) {
+                currentIndex = 0;
+            }
+
+            var lightboxImg = document.getElementById("lightbox-img");
+            var lightboxDescription = document.getElementById("lightbox-description");
+
+            lightboxImg.src = galleryImages[currentIndex].src;
+            lightboxDescription.textContent = galleryImages[currentIndex].getAttribute("data-description");
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+            document.removeEventListener("keydown", handleKeyPress);
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === "ArrowRight") {
+                changeImage(1);
+            } else if (event.key === "ArrowLeft") {
+                changeImage(-1);
+            } else if (event.key === "Escape") {
+                closeLightbox();
+            }
+        }
+
+        // Prevent closing lightbox when clicking outside the image
+        window.onclick = function(event) {
+            var lightboxImg = document.getElementById("lightbox-img");
+            if (event.target === lightboxImg) {
+                return; // Don't close the lightbox if clicking on the image
+            }
+        };
+    </script>
 </body>
+
 </html>
