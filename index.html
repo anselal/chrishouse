@@ -16,6 +16,10 @@
             color: #333;
         }
 
+        ul {
+            list-style-type: none;
+        }
+
         /* Top Navigation */
         nav {
             position: fixed;
@@ -169,7 +173,7 @@
         /* Hero Section */
         header {
             position: relative;
-            background-image: url("assets/img/hero-image.jpg");
+            background-image: url("assets/img/building/hero-image.jpg");
             background-size: cover;
             background-position: center center;
             background-attachment: fixed;
@@ -474,15 +478,34 @@
         <h2>Accommodation</h2>
         <p>We offer a variety of accommodation options:</p>
         <div class="gallery-accommodation">
-            <img src="assets/img/ground-floor-apartment.jpg" alt="Ground Floor Apartment" loading="lazy" />
-            <img src="assets/img/second-floor-apartment.jpg" alt="Second Floor Apartment" loading="lazy" />
-            <img src="assets/img/ground-level-house.jpg" alt="Ground-Level House" loading="lazy" />
+            <img src="assets/img/groundfloor-apartment/ground-floor-apartment.jpg" alt="Ground Floor Apartment"
+                loading="lazy" />
+            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-13.jpg" alt="Second Floor Apartment"
+                loading="lazy" />
+            <img src="assets/img/studio/studio-6.jpg" alt="Studio" loading="lazy" />
         </div>
         <p>
-            Ground Floor Apartments include 2 double beds, 1 single bed, a sofa, and a dining table for 5 with a
-            spacious balcony. The second-floor apartments feature additional attic space and two balconies, while the
-            ground-level
-            house offers 2 single beds, a dining area, and a lovely balcony.
+            The <u>Ground Floor Apartments</u> offer comfortable accommodation with ample space for relaxation. Each
+            apartment
+            features two double beds, one single bed, and a sofa, while the dining area includes a table with five
+            chairs. Guests can also enjoy the outdoors, with a well-furnished outdoor area equipped with chairs and
+            tables.
+        </p>
+        <p>
+            The <u>Second-Floor Apartments</u> provide a spacious and cozy environment, ideal for couples. Inside, the
+            apartment is furnished with one double bed, one single bed, and a sofa, while the attic offers an additional
+            two single beds. The fully equipped kitchen and dining table with four chairs make it easy to prepare and
+            enjoy meals. For outdoor relaxation, there are two balconies: the first equipped with a table and four
+            chairs, and the second with a smaller setup of a table and two chairs.
+        </p>
+        <p>
+            The <u>Ground Floor Studio</u> offers a comfortable and modern living space, ideal for children and the
+            elderly.
+            Inside, the house is furnished with two single beds and features a dining room with a fully equipped
+            kitchen. The outdoor area includes a cozy sofa, table, and chairs, providing a relaxing space to enjoy the
+            fresh air. With its elegant design, including modern white marble and built-in fireplaces, the house
+            combines style and comfort. However, it is not suitable for individuals with wheelchairs or mental
+            disabilities.
         </p>
     </section>
 
@@ -490,13 +513,29 @@
     <section id="facilities">
         <h2>Facilities & Amenities</h2>
         <p>
+            <u>Reception on the First Floor:</u>
+            The owner lives here permanently. He welcomes guests, oversees the facilities, and is always available for
+            anything the guests may need.
+
+        </p>
+        <p>
+            We also offer high-quality <u>amenities</u> such as:
+        <ul>
+            <li>WLAN</li>
+            <li>Shared laundry machine</li>
+            <li>Bath towels, face towels, and kitchen towels</li>
+            <li>Bed sheets, blankets, and light summer duvets</li>
+            <li>Towels and sheets are cotton, white and colorful and they are properly disinfected.</li>
+            <li>Air conditioning with an additional meter that charges separately at 0.30€/1kWh if used</li>
+            <li>Toilet paper, soap, dish detergent</li>
+        </ul>
+        </p>
+        <p>
             The courtyard is paved with stone and tiles, featuring a rustic gazebo, a barbecue, a vine providing thick
             shade, a bench, chairs, small cypress trees, and many potted plants.
         </p>
         <p>
-            We also offer high-quality amenities such as WLAN, a shared laundry machine, bath towels, face towels and
-            kitchen towels, bed sheets, blankets and summer duvets, air conditioning with a metered charge (0.30€/1kWh),
-            and more.
+            <u>Cleaning:</u> 2 times a week, including change of sheets and towels, bathroom and floor cleaning
         </p>
     </section>
 
@@ -504,7 +543,7 @@
     <section id="pricing">
         <h2>Pricing</h2>
         <p>
-            4 Apartments and 1 Room, Studio
+            4 Apartments and 1 Room Studio
         </p>
         <p>
             Apartments (4 people) per night
@@ -528,11 +567,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1/5 – 20/5</td>
-                        <td>80€ / day</td>
-                        <td>50€ / day</td>
-                    </tr>
                     <tr>
                         <td>20/5 – 30/5</td>
                         <td>90€ / day</td>
@@ -565,17 +599,21 @@
                     </tr>
                     <tr>
                         <td>1/9 – 10/9</td>
-                        <td>110€ / day</td>
-                        <td>70€ / day</td>
-                    </tr>
-                    <tr>
-                        <td>10/9 – 30/9</td>
-                        <td>95€ / day</td>
-                        <td>60€ / day</td>
+                        <td>100€ / day</td>
+                        <td>65€ / day</td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        <p>
+            Minimum stay: 5 days during low season and more during high season (upon agreement by phone)
+            <br><br>
+            <u>Pets are not allowed.</u>
+        </p>
+        <p>
+            Check-in time: 13:00 – 14:00<br>
+            Check-out time: 10:00 am
+        </p>
         <p>
             The air conditioning is charged extra at 0.30€/1kWh, and each apartment has a separate meter.
         </p>
@@ -585,18 +623,95 @@
     <section id="gallery">
         <h2>Photo Gallery</h2>
         <div class="gallery">
-            <img src="assets/img/villa-front.jpg" alt="Villa Front" data-index="0" data-description="Villa Front View"
+            <img src="assets/img/building/building-1.jpg" alt="Building 1" data-index="0" data-description="Building 1"
                 onclick="openLightbox(this)" />
-            <img src="assets/img/courtyard.jpg" alt="Courtyard" data-index="1"
-                data-description="Courtyard Area with Stone Pavement" onclick="openLightbox(this)" />
-            <img src="assets/img/barbecue-area.jpg" alt="Barbecue Area" data-index="2"
-                data-description="Barbecue Area with Shaded Gazebo" onclick="openLightbox(this)" />
-            <img src="assets/img/ground-floor-apartment.jpg" alt="Ground Floor Apartment"
-                data-description="Ground Floor Apartment" data-index="3" onclick="openLightbox(this)" />
-            <img src="assets/img/second-floor-apartment.jpg" alt="Second Floor Apartment"
-                data-description="Second Floor Apartment" data-index="4" onclick="openLightbox(this)" />
-            <img src="assets/img/ground-level-house.jpg" alt="Ground-Level House" data-index="5"
-                data-description="Ground-Level House" onclick="openLightbox(this)" />
+            <img src="assets/img/building/building-2.jpg" alt="Building 2" data-index="1" data-description="Building 2"
+                onclick="openLightbox(this)" />
+            <img src="assets/img/building/building-3.jpg" alt="Building 3" data-index="2" data-description="Building 3"
+                onclick="openLightbox(this)" />
+            <img src="assets/img/building/building-4.jpg" alt="Building 4" data-index="3" data-description="Building 4"
+                onclick="openLightbox(this)" />
+            <img src="assets/img/building/building-5.jpg" alt="Building 5" data-index="4" data-description="Building 5"
+                onclick="openLightbox(this)" />
+            <img src="assets/img/building/building-6.jpg" alt="Building 6" data-index="5" data-description="Building 6"
+                onclick="openLightbox(this)" />
+            <img src="assets/img/building/building-7.jpg" alt="Building 7" data-index="6" data-description="Building 7"
+                onclick="openLightbox(this)" />
+            <img src="assets/img/building/building-8.jpg" alt="Building 8" data-index="7" data-description="Building 8"
+                onclick="openLightbox(this)" />
+        </div>
+
+        <div class="gallery">
+            <img src="assets/img/groundfloor-apartment/groundfloor-apartment-1.jpg" alt="Ground Floor Apartment 1"
+                data-index="0" data-description="Ground Floor Apartment 1" onclick="openLightbox(this)" />
+            <img src="assets/img/groundfloor-apartment/groundfloor-apartment-2.jpg" alt="Ground Floor Apartment 2"
+                data-index="1" data-description="Ground Floor Apartment 2" onclick="openLightbox(this)" />
+            <img src="assets/img/groundfloor-apartment/groundfloor-apartment-3.jpg" alt="Ground Floor Apartment 3"
+                data-index="2" data-description="Ground Floor Apartment 3" onclick="openLightbox(this)" />
+            <img src="assets/img/groundfloor-apartment/groundfloor-apartment-4.jpg" alt="Ground Floor Apartment 4"
+                data-index="3" data-description="Ground Floor Apartment 4" onclick="openLightbox(this)" />
+            <img src="assets/img/groundfloor-apartment/groundfloor-apartment-5.jpg" alt="Ground Floor Apartment 5"
+                data-index="4" data-description="Ground Floor Apartment 5" onclick="openLightbox(this)" />
+            <img src="assets/img/groundfloor-apartment/groundfloor-apartment-6.jpg" alt="Ground Floor Apartment 6"
+                data-index="5" data-description="Ground Floor Apartment 6" onclick="openLightbox(this)" />
+            <img src="assets/img/groundfloor-apartment/groundfloor-apartment-7.jpg" alt="Ground Floor Apartment 7"
+                data-index="6" data-description="Ground Floor Apartment 7" onclick="openLightbox(this)" />
+            <img src="assets/img/groundfloor-apartment/groundfloor-apartment-8.jpg" alt="Ground Floor Apartment 8"
+                data-index="7" data-description="Ground Floor Apartment 8" onclick="openLightbox(this)" />
+            <img src="assets/img/groundfloor-apartment/groundfloor-apartment-9.jpg" alt="Ground Floor Apartment 9"
+                data-index="8" data-description="Ground Floor Apartment 9" onclick="openLightbox(this)" />
+            <img src="assets/img/groundfloor-apartment/groundfloor-apartment-10.jpg" alt="Ground Floor Apartment 10"
+                data-index="9" data-description="Ground Floor Apartment 10" onclick="openLightbox(this)" />
+        </div>
+
+        <div class="gallery">
+            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-1.jpg" alt="Second Floor Apartment 1"
+                data-index="0" data-description="Second Floor Apartment 1" onclick="openLightbox(this)" />
+            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-2.jpg" alt="Second Floor Apartment 2"
+                data-index="1" data-description="Second Floor Apartment 2" onclick="openLightbox(this)" />
+            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-3.jpg" alt="Second Floor Apartment 3"
+                data-index="2" data-description="Second Floor Apartment 3" onclick="openLightbox(this)" />
+            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-4.jpg" alt="Second Floor Apartment 4"
+                data-index="3" data-description="Second Floor Apartment 4" onclick="openLightbox(this)" />
+            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-5.jpg" alt="Second Floor Apartment 5"
+                data-index="4" data-description="Second Floor Apartment 5" onclick="openLightbox(this)" />
+            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-6.jpg" alt="Second Floor Apartment 6"
+                data-index="5" data-description="Second Floor Apartment 6" onclick="openLightbox(this)" />
+            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-7.jpg" alt="Second Floor Apartment 7"
+                data-index="6" data-description="Second Floor Apartment 7" onclick="openLightbox(this)" />
+            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-8.jpg" alt="Second Floor Apartment 8"
+                data-index="7" data-description="Second Floor Apartment 8" onclick="openLightbox(this)" />
+            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-9.jpg" alt="Second Floor Apartment 9"
+                data-index="8" data-description="Second Floor Apartment 9" onclick="openLightbox(this)" />
+            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-10.jpg" alt="Second Floor Apartment 10"
+                data-index="9" data-description="Second Floor Apartment 10" onclick="openLightbox(this)" />
+            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-11.jpg" alt="Second Floor Apartment 11"
+                data-index="10" data-description="Second Floor Apartment 11" onclick="openLightbox(this)" />
+            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-12.jpg" alt="Second Floor Apartment 12"
+                data-index="11" data-description="Second Floor Apartment 12" onclick="openLightbox(this)" />
+            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-13.jpg" alt="Second Floor Apartment 13"
+                data-index="12" data-description="Second Floor Apartment 13" onclick="openLightbox(this)" />
+        </div>
+
+        <div class="gallery">
+            <img src="assets/img/studio/studio-1.jpg" alt="Studio 1" data-index="0" data-description="Studio 1"
+                onclick="openLightbox(this)" />
+            <img src="assets/img/studio/studio-2.jpg" alt="Studio 2" data-index="1" data-description="Studio 2"
+                onclick="openLightbox(this)" />
+            <img src="assets/img/studio/studio-3.jpg" alt="Studio 3" data-index="2" data-description="Studio 3"
+                onclick="openLightbox(this)" />
+            <img src="assets/img/studio/studio-4.jpg" alt="Studio 4" data-index="3" data-description="Studio 4"
+                onclick="openLightbox(this)" />
+            <img src="assets/img/studio/studio-5.jpg" alt="Studio 5" data-index="4" data-description="Studio 5"
+                onclick="openLightbox(this)" />
+            <img src="assets/img/studio/studio-6.jpg" alt="Studio 6" data-index="5" data-description="Studio 6"
+                onclick="openLightbox(this)" />
+            <img src="assets/img/studio/studio-7.jpg" alt="Studio 7" data-index="6" data-description="Studio 7"
+                onclick="openLightbox(this)" />
+            <img src="assets/img/studio/studio-8.jpg" alt="Studio 8" data-index="7" data-description="Studio 8"
+                onclick="openLightbox(this)" />
+            <img src="assets/img/studio/studio-9.jpg" alt="Studio 9" data-index="8" data-description="Studio 9"
+                onclick="openLightbox(this)" />
         </div>
 
         <!-- Lightbox Modal -->
