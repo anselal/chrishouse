@@ -9,6 +9,23 @@
     <meta name="keywords"
         content="villa, greece, portaria beach, vacation, seaside, accommodation, chris house, tzelepis, chalkidiki, portaria" />
     <title>Apartments Tzelepis – Chris House</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hotel",
+      "name": "Apartments Tzelepis – Chris House",
+      "description": "A tranquil escape by the sea in Portaria Beach, Greece.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Portaria Beach",
+        "addressLocality": "Nea Moudania",
+        "addressCountry": "Greece"
+      },
+      "telephone": "+49 1520 49 27 454",
+      "email": "tzelepischristos83@gmail.com",
+      "image": "https://yourwebsite.com/assets/img/building/hero-image.jpg"
+    }
+    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -256,6 +273,36 @@
         }
 
         /* Accommodation Gallery */
+        .album-thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .album {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .album img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .album img:hover {
+            transform: scale(1.05);
+        }
+
+        .album p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
         .gallery-accommodation {
             display: flex;
             flex-wrap: wrap;
@@ -479,6 +526,7 @@
     <section id="accommodation">
         <h2>Accommodation</h2>
         <p>We offer a variety of accommodation options:</p>
+        <!--
         <div class="gallery-accommodation">
             <img src="assets/img/groundfloor-apartment/ground-floor-apartment.jpg" alt="Ground Floor Apartment"
                 loading="lazy" />
@@ -486,6 +534,7 @@
                 loading="lazy" />
             <img src="assets/img/studio/studio-6.jpg" alt="Studio" loading="lazy" />
         </div>
+        -->
         <p>
             The <u>Ground Floor Apartments</u> offer comfortable accommodation with ample space for relaxation. Each
             apartment
@@ -623,100 +672,24 @@
 
     <!-- Gallery Section -->
     <section id="gallery">
-        <h2>Photo Gallery - Building</h2>
-        <div class="gallery">
-            <img src="assets/img/building/building-1.jpg" alt="Building 1" data-index="0" data-description="Building 1"
-                onclick="openLightbox(this)" />
-            <img src="assets/img/building/building-2.jpg" alt="Building 2" data-index="1" data-description="Building 2"
-                onclick="openLightbox(this)" />
-            <img src="assets/img/building/building-3.jpg" alt="Building 3" data-index="2" data-description="Building 3"
-                onclick="openLightbox(this)" />
-            <img src="assets/img/building/building-4.jpg" alt="Building 4" data-index="3" data-description="Building 4"
-                onclick="openLightbox(this)" />
-            <img src="assets/img/building/building-5.jpg" alt="Building 5" data-index="4" data-description="Building 5"
-                onclick="openLightbox(this)" />
-            <img src="assets/img/building/building-6.jpg" alt="Building 6" data-index="5" data-description="Building 6"
-                onclick="openLightbox(this)" />
-            <img src="assets/img/building/building-7.jpg" alt="Building 7" data-index="6" data-description="Building 7"
-                onclick="openLightbox(this)" />
-            <img src="assets/img/building/building-8.jpg" alt="Building 8" data-index="7" data-description="Building 8"
-                onclick="openLightbox(this)" />
-        </div>
-
-        <h2>Photo Gallery - Ground Floor Apartment</h2>
-        <div class="gallery">
-            <img src="assets/img/groundfloor-apartment/groundfloor-apartment-1.jpg" alt="Ground Floor Apartment 1"
-                data-index="0" data-description="Ground Floor Apartment 1" onclick="openLightbox(this)" />
-            <img src="assets/img/groundfloor-apartment/groundfloor-apartment-2.jpg" alt="Ground Floor Apartment 2"
-                data-index="1" data-description="Ground Floor Apartment 2" onclick="openLightbox(this)" />
-            <img src="assets/img/groundfloor-apartment/groundfloor-apartment-3.jpg" alt="Ground Floor Apartment 3"
-                data-index="2" data-description="Ground Floor Apartment 3" onclick="openLightbox(this)" />
-            <img src="assets/img/groundfloor-apartment/groundfloor-apartment-4.jpg" alt="Ground Floor Apartment 4"
-                data-index="3" data-description="Ground Floor Apartment 4" onclick="openLightbox(this)" />
-            <img src="assets/img/groundfloor-apartment/groundfloor-apartment-5.jpg" alt="Ground Floor Apartment 5"
-                data-index="4" data-description="Ground Floor Apartment 5" onclick="openLightbox(this)" />
-            <img src="assets/img/groundfloor-apartment/groundfloor-apartment-6.jpg" alt="Ground Floor Apartment 6"
-                data-index="5" data-description="Ground Floor Apartment 6" onclick="openLightbox(this)" />
-            <img src="assets/img/groundfloor-apartment/groundfloor-apartment-7.jpg" alt="Ground Floor Apartment 7"
-                data-index="6" data-description="Ground Floor Apartment 7" onclick="openLightbox(this)" />
-            <img src="assets/img/groundfloor-apartment/groundfloor-apartment-8.jpg" alt="Ground Floor Apartment 8"
-                data-index="7" data-description="Ground Floor Apartment 8" onclick="openLightbox(this)" />
-            <img src="assets/img/groundfloor-apartment/groundfloor-apartment-9.jpg" alt="Ground Floor Apartment 9"
-                data-index="8" data-description="Ground Floor Apartment 9" onclick="openLightbox(this)" />
-            <img src="assets/img/groundfloor-apartment/groundfloor-apartment-10.jpg" alt="Ground Floor Apartment 10"
-                data-index="9" data-description="Ground Floor Apartment 10" onclick="openLightbox(this)" />
-        </div>
-
-        <h2>Photo Gallery - Second Floor Apartment</h2>
-        <div class="gallery">
-            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-1.jpg" alt="Second Floor Apartment 1"
-                data-index="0" data-description="Second Floor Apartment 1" onclick="openLightbox(this)" />
-            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-2.jpg" alt="Second Floor Apartment 2"
-                data-index="1" data-description="Second Floor Apartment 2" onclick="openLightbox(this)" />
-            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-3.jpg" alt="Second Floor Apartment 3"
-                data-index="2" data-description="Second Floor Apartment 3" onclick="openLightbox(this)" />
-            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-4.jpg" alt="Second Floor Apartment 4"
-                data-index="3" data-description="Second Floor Apartment 4" onclick="openLightbox(this)" />
-            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-5.jpg" alt="Second Floor Apartment 5"
-                data-index="4" data-description="Second Floor Apartment 5" onclick="openLightbox(this)" />
-            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-6.jpg" alt="Second Floor Apartment 6"
-                data-index="5" data-description="Second Floor Apartment 6" onclick="openLightbox(this)" />
-            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-7.jpg" alt="Second Floor Apartment 7"
-                data-index="6" data-description="Second Floor Apartment 7" onclick="openLightbox(this)" />
-            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-8.jpg" alt="Second Floor Apartment 8"
-                data-index="7" data-description="Second Floor Apartment 8" onclick="openLightbox(this)" />
-            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-9.jpg" alt="Second Floor Apartment 9"
-                data-index="8" data-description="Second Floor Apartment 9" onclick="openLightbox(this)" />
-            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-10.jpg" alt="Second Floor Apartment 10"
-                data-index="9" data-description="Second Floor Apartment 10" onclick="openLightbox(this)" />
-            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-11.jpg" alt="Second Floor Apartment 11"
-                data-index="10" data-description="Second Floor Apartment 11" onclick="openLightbox(this)" />
-            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-12.jpg" alt="Second Floor Apartment 12"
-                data-index="11" data-description="Second Floor Apartment 12" onclick="openLightbox(this)" />
-            <img src="assets/img/secondfloor-apartment/secondfloor-apartment-13.jpg" alt="Second Floor Apartment 13"
-                data-index="12" data-description="Second Floor Apartment 13" onclick="openLightbox(this)" />
-        </div>
-
-        <h2>Photo Gallery - Studio</h2>
-        <div class="gallery">
-            <img src="assets/img/studio/studio-1.jpg" alt="Studio 1" data-index="0" data-description="Studio 1"
-                onclick="openLightbox(this)" />
-            <img src="assets/img/studio/studio-2.jpg" alt="Studio 2" data-index="1" data-description="Studio 2"
-                onclick="openLightbox(this)" />
-            <img src="assets/img/studio/studio-3.jpg" alt="Studio 3" data-index="2" data-description="Studio 3"
-                onclick="openLightbox(this)" />
-            <img src="assets/img/studio/studio-4.jpg" alt="Studio 4" data-index="3" data-description="Studio 4"
-                onclick="openLightbox(this)" />
-            <img src="assets/img/studio/studio-5.jpg" alt="Studio 5" data-index="4" data-description="Studio 5"
-                onclick="openLightbox(this)" />
-            <img src="assets/img/studio/studio-6.jpg" alt="Studio 6" data-index="5" data-description="Studio 6"
-                onclick="openLightbox(this)" />
-            <img src="assets/img/studio/studio-7.jpg" alt="Studio 7" data-index="6" data-description="Studio 7"
-                onclick="openLightbox(this)" />
-            <img src="assets/img/studio/studio-8.jpg" alt="Studio 8" data-index="7" data-description="Studio 8"
-                onclick="openLightbox(this)" />
-            <img src="assets/img/studio/studio-9.jpg" alt="Studio 9" data-index="8" data-description="Studio 9"
-                onclick="openLightbox(this)" />
+        <h2>Photo Gallery</h2>
+        <div class="album-thumbnails">
+            <div class="album" data-album="building">
+                <img src="assets/img/building/hero-image.jpg" alt="Building Thumbnail">
+                <p>Building</p>
+            </div>
+            <div class="album" data-album="groundfloor">
+                <img src="assets/img/groundfloor-apartment/groundfloor-apartment-5.jpg" alt="Ground Floor Apartment Thumbnail">
+                <p>Ground Floor Apartment</p>
+            </div>
+            <div class="album" data-album="secondfloor">
+                <img src="assets/img/secondfloor-apartment/secondfloor-apartment-4.jpg" alt="Second Floor Apartment Thumbnail">
+                <p>Second Floor Apartment</p>
+            </div>
+            <div class="album" data-album="studio">
+                <img src="assets/img/studio/studio-7.jpg" alt="Studio Thumbnail">
+                <p>Studio</p>
+            </div>
         </div>
 
         <!-- Lightbox Modal -->
@@ -749,116 +722,116 @@
     </footer>
 
     <script>
-        // Toggle Menu
-        function toggleMenu() {
-            const navUl = document.querySelector("nav ul");
-            const overlay = document.getElementById("menu-overlay");
-            navUl.classList.toggle("show");
-            overlay.classList.toggle("show");
-        }
+    let currentIndex = 0;
+    let currentAlbum = [];
+    const albums = {
+        building: [
+            { src: "assets/img/building/hero-image.jpg", description: "Building" },
+            { src: "assets/img/building/building-1.jpg", description: "Building 1" },
+            { src: "assets/img/building/building-2.jpg", description: "Building 2" },
+            { src: "assets/img/building/building-3.jpg", description: "Building 3" },
+            { src: "assets/img/building/building-4.jpg", description: "Building 4" },
+            { src: "assets/img/building/building-5.jpg", description: "Building 5" },
+            { src: "assets/img/building/building-6.jpg", description: "Building 6" },
+            { src: "assets/img/building/building-7.jpg", description: "Building 7" },
+            { src: "assets/img/building/building-8.jpg", description: "Building 8" },
+            // Add all building images here
+        ],
+        groundfloor: [
+            { src: "assets/img/groundfloor-apartment/groundfloor-apartment-1.jpg", description: "Ground Floor Apartment 1" },
+            { src: "assets/img/groundfloor-apartment/groundfloor-apartment-2.jpg", description: "Ground Floor Apartment 2" },
+            { src: "assets/img/groundfloor-apartment/groundfloor-apartment-3.jpg", description: "Ground Floor Apartment 3" },
+            { src: "assets/img/groundfloor-apartment/groundfloor-apartment-4.jpg", description: "Ground Floor Apartment 4" },
+            { src: "assets/img/groundfloor-apartment/groundfloor-apartment-5.jpg", description: "Ground Floor Apartment 5" },
+            { src: "assets/img/groundfloor-apartment/groundfloor-apartment-6.jpg", description: "Ground Floor Apartment 6" },
+            { src: "assets/img/groundfloor-apartment/groundfloor-apartment-7.jpg", description: "Ground Floor Apartment 7" },
+            { src: "assets/img/groundfloor-apartment/groundfloor-apartment-8.jpg", description: "Ground Floor Apartment 8" },
+            { src: "assets/img/groundfloor-apartment/groundfloor-apartment-9.jpg", description: "Ground Floor Apartment 9" },
+            { src: "assets/img/groundfloor-apartment/groundfloor-apartment-10.jpg", description: "Ground Floor Apartment 10" },
+            // Add all ground floor apartment images here
+        ],
+        secondfloor: [
+            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-1.jpg", description: "Second Floor Apartment 1" },
+            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-2.jpg", description: "Second Floor Apartment 2" },
+            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-3.jpg", description: "Second Floor Apartment 3" },
+            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-4.jpg", description: "Second Floor Apartment 4" },
+            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-5.jpg", description: "Second Floor Apartment 5" },
+            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-6.jpg", description: "Second Floor Apartment 6" },
+            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-7.jpg", description: "Second Floor Apartment 7" },
+            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-8.jpg", description: "Second Floor Apartment 8" },
+            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-9.jpg", description: "Second Floor Apartment 9" },
+            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-10.jpg", description: "Second Floor Apartment 10" },
+            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-11.jpg", description: "Second Floor Apartment 11" },
+            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-12.jpg", description: "Second Floor Apartment 12" },
+            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-13.jpg", description: "Second Floor Apartment 13" },
+            // Add all second floor apartment images here
+        ],
+        studio: [
+            { src: "assets/img/studio/studio-1.jpg", description: "Studio 1" },
+            { src: "assets/img/studio/studio-2.jpg", description: "Studio 2" },
+            { src: "assets/img/studio/studio-3.jpg", description: "Studio 3" },
+            { src: "assets/img/studio/studio-4.jpg", description: "Studio 4" },
+            { src: "assets/img/studio/studio-5.jpg", description: "Studio 5" },
+            { src: "assets/img/studio/studio-6.jpg", description: "Studio 6" },
+            { src: "assets/img/studio/studio-7.jpg", description: "Studio 7" },
+            { src: "assets/img/studio/studio-8.jpg", description: "Studio 8" },
+            { src: "assets/img/studio/studio-9.jpg", description: "Studio 9" },
+            // Add all studio images here
+        ]
+    };
 
-        // Close menu when clicking a link
-        document.querySelectorAll("nav ul li a").forEach((link) => {
-            link.addEventListener("click", () => {
-                document.querySelector("nav ul").classList.remove("show");
-                document.getElementById("menu-overlay").classList.remove("show");
-            });
+    // Open lightbox for the selected album
+    document.querySelectorAll(".album").forEach((album) => {
+        album.addEventListener("click", () => {
+            const albumName = album.getAttribute("data-album");
+            currentAlbum = albums[albumName];
+            currentIndex = 0;
+            openLightbox(currentAlbum[currentIndex]);
         });
+    });
 
-        // Highlight the active section link in the navigation menu
-        document.addEventListener("DOMContentLoaded", function() {
-            const sections = document.querySelectorAll("section");
-            const navLinks = document.querySelectorAll("nav ul li a");
+    function openLightbox(image) {
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const lightboxDescription = document.getElementById("lightbox-description");
 
-            function removeActiveClass() {
-                navLinks.forEach((link) => link.classList.remove("active"));
-            }
+        lightbox.style.display = "flex";
+        lightboxImg.src = image.src;
+        lightboxDescription.textContent = image.description;
 
-            function addActiveClass(sectionId) {
-                removeActiveClass();
-                const activeLink = document.querySelector(`nav ul li a[href="#${sectionId}"]`);
-                if (activeLink) activeLink.classList.add("active");
-            }
+        document.addEventListener("keydown", handleKeyPress);
+    }
 
-            window.addEventListener("scroll", () => {
-                let currentSection = "";
-                const scrollPosition = window.pageYOffset + window.innerHeight;
+    function changeImage(direction) {
+        currentIndex += direction;
 
-                sections.forEach((section, index) => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-
-                    if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
-                        currentSection = section.getAttribute("id");
-                    }
-
-                    if (scrollPosition >= document.body.scrollHeight && index === sections.length - 1) {
-                        currentSection = section.getAttribute("id");
-                    }
-                });
-
-                if (currentSection) {
-                    addActiveClass(currentSection);
-                }
-            });
-        });
-
-        // Lightbox functionality
-        var currentIndex = 0;
-        var galleryImages = document.querySelectorAll(".gallery img");
-
-        function openLightbox(img) {
-            var lightbox = document.getElementById("lightbox");
-            var lightboxImg = document.getElementById("lightbox-img");
-            var lightboxDescription = document.getElementById("lightbox-description");
-
-            currentIndex = parseInt(img.getAttribute("data-index"));
-
-            lightbox.style.display = "flex";
-            lightboxImg.src = img.src;
-            lightboxDescription.textContent = img.getAttribute("data-description");
-
-            document.addEventListener("keydown", handleKeyPress);
+        if (currentIndex < 0) {
+            currentIndex = currentAlbum.length - 1;
+        } else if (currentIndex >= currentAlbum.length) {
+            currentIndex = 0;
         }
 
-        function changeImage(direction) {
-            currentIndex += direction;
+        const lightboxImg = document.getElementById("lightbox-img");
+        const lightboxDescription = document.getElementById("lightbox-description");
 
-            if (currentIndex < 0) {
-                currentIndex = galleryImages.length - 1;
-            } else if (currentIndex >= galleryImages.length) {
-                currentIndex = 0;
-            }
+        lightboxImg.src = currentAlbum[currentIndex].src;
+        lightboxDescription.textContent = currentAlbum[currentIndex].description;
+    }
 
-            var lightboxImg = document.getElementById("lightbox-img");
-            var lightboxDescription = document.getElementById("lightbox-description");
+    function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+        document.removeEventListener("keydown", handleKeyPress);
+    }
 
-            lightboxImg.src = galleryImages[currentIndex].src;
-            lightboxDescription.textContent = galleryImages[currentIndex].getAttribute("data-description");
+    function handleKeyPress(event) {
+        if (event.key === "ArrowRight") {
+            changeImage(1);
+        } else if (event.key === "ArrowLeft") {
+            changeImage(-1);
+        } else if (event.key === "Escape") {
+            closeLightbox();
         }
-
-        function closeLightbox() {
-            document.getElementById("lightbox").style.display = "none";
-            document.removeEventListener("keydown", handleKeyPress);
-        }
-
-        function handleKeyPress(event) {
-            if (event.key === "ArrowRight") {
-                changeImage(1);
-            } else if (event.key === "ArrowLeft") {
-                changeImage(-1);
-            } else if (event.key === "Escape") {
-                closeLightbox();
-            }
-        }
-
-        // Prevent closing lightbox when clicking outside the image
-        window.onclick = function(event) {
-            var lightboxImg = document.getElementById("lightbox-img");
-            if (event.target === lightboxImg) {
-                return; // Don't close the lightbox if clicking on the image
-            }
-        };
+    }
     </script>
 </body>
 
