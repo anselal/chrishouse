@@ -679,11 +679,13 @@
                 <p>Building</p>
             </div>
             <div class="album" data-album="groundfloor">
-                <img src="assets/img/groundfloor-apartment/groundfloor-apartment-5.jpg" alt="Ground Floor Apartment Thumbnail">
+                <img src="assets/img/groundfloor-apartment/groundfloor-apartment-5.jpg"
+                    alt="Ground Floor Apartment Thumbnail">
                 <p>Ground Floor Apartment</p>
             </div>
             <div class="album" data-album="secondfloor">
-                <img src="assets/img/secondfloor-apartment/secondfloor-apartment-4.jpg" alt="Second Floor Apartment Thumbnail">
+                <img src="assets/img/secondfloor-apartment/secondfloor-apartment-4.jpg"
+                    alt="Second Floor Apartment Thumbnail">
                 <p>Second Floor Apartment</p>
             </div>
             <div class="album" data-album="studio">
@@ -722,115 +724,112 @@
     </footer>
 
     <script>
-    let currentIndex = 0;
-    let currentAlbum = [];
-    const albums = {
-        building: [
-            { src: "assets/img/building/hero-image.jpg", description: "Building" },
-            { src: "assets/img/building/building-1.jpg", description: "Building 1" },
-            { src: "assets/img/building/building-2.jpg", description: "Building 2" },
-            { src: "assets/img/building/building-3.jpg", description: "Building 3" },
-            { src: "assets/img/building/building-4.jpg", description: "Building 4" },
-            { src: "assets/img/building/building-5.jpg", description: "Building 5" },
-            { src: "assets/img/building/building-6.jpg", description: "Building 6" },
-            { src: "assets/img/building/building-7.jpg", description: "Building 7" },
-            { src: "assets/img/building/building-8.jpg", description: "Building 8" },
-            // Add all building images here
-        ],
-        groundfloor: [
-            { src: "assets/img/groundfloor-apartment/groundfloor-apartment-1.jpg", description: "Ground Floor Apartment 1" },
-            { src: "assets/img/groundfloor-apartment/groundfloor-apartment-2.jpg", description: "Ground Floor Apartment 2" },
-            { src: "assets/img/groundfloor-apartment/groundfloor-apartment-3.jpg", description: "Ground Floor Apartment 3" },
-            { src: "assets/img/groundfloor-apartment/groundfloor-apartment-4.jpg", description: "Ground Floor Apartment 4" },
-            { src: "assets/img/groundfloor-apartment/groundfloor-apartment-5.jpg", description: "Ground Floor Apartment 5" },
-            { src: "assets/img/groundfloor-apartment/groundfloor-apartment-6.jpg", description: "Ground Floor Apartment 6" },
-            { src: "assets/img/groundfloor-apartment/groundfloor-apartment-7.jpg", description: "Ground Floor Apartment 7" },
-            { src: "assets/img/groundfloor-apartment/groundfloor-apartment-8.jpg", description: "Ground Floor Apartment 8" },
-            { src: "assets/img/groundfloor-apartment/groundfloor-apartment-9.jpg", description: "Ground Floor Apartment 9" },
-            { src: "assets/img/groundfloor-apartment/groundfloor-apartment-10.jpg", description: "Ground Floor Apartment 10" },
-            // Add all ground floor apartment images here
-        ],
-        secondfloor: [
-            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-1.jpg", description: "Second Floor Apartment 1" },
-            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-2.jpg", description: "Second Floor Apartment 2" },
-            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-3.jpg", description: "Second Floor Apartment 3" },
-            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-4.jpg", description: "Second Floor Apartment 4" },
-            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-5.jpg", description: "Second Floor Apartment 5" },
-            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-6.jpg", description: "Second Floor Apartment 6" },
-            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-7.jpg", description: "Second Floor Apartment 7" },
-            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-8.jpg", description: "Second Floor Apartment 8" },
-            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-9.jpg", description: "Second Floor Apartment 9" },
-            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-10.jpg", description: "Second Floor Apartment 10" },
-            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-11.jpg", description: "Second Floor Apartment 11" },
-            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-12.jpg", description: "Second Floor Apartment 12" },
-            { src: "assets/img/secondfloor-apartment/secondfloor-apartment-13.jpg", description: "Second Floor Apartment 13" },
-            // Add all second floor apartment images here
-        ],
-        studio: [
-            { src: "assets/img/studio/studio-1.jpg", description: "Studio 1" },
-            { src: "assets/img/studio/studio-2.jpg", description: "Studio 2" },
-            { src: "assets/img/studio/studio-3.jpg", description: "Studio 3" },
-            { src: "assets/img/studio/studio-4.jpg", description: "Studio 4" },
-            { src: "assets/img/studio/studio-6.jpg", description: "Studio 6" },
-            { src: "assets/img/studio/studio-7.jpg", description: "Studio 7" },
-            { src: "assets/img/studio/studio-8.jpg", description: "Studio 8" },
-            { src: "assets/img/studio/studio-9.jpg", description: "Studio 9" },
-            // Add all studio images here
-        ]
-    };
+        let currentIndex = 0;
+        let currentAlbum = [];
+        const albums = {
+            building: [
+                { src: "assets/img/building/hero-image.jpg", description: "Building" },
+                { src: "assets/img/building/building-1.jpg", description: "Building 1" },
+                { src: "assets/img/building/building-2.jpg", description: "Building 2" },
+                { src: "assets/img/building/building-3.jpg", description: "Building 3" },
+                { src: "assets/img/building/building-4.jpg", description: "Building 4" },
+                { src: "assets/img/building/building-5.jpg", description: "Building 5" },
+                { src: "assets/img/building/building-6.jpg", description: "Building 6" },
+                { src: "assets/img/building/building-7.jpg", description: "Building 7" },
+                // Add all building images here
+            ],
+            groundfloor: [
+                { src: "assets/img/groundfloor-apartment/groundfloor-apartment-1.jpg", description: "Ground Floor Apartment 1" },
+                { src: "assets/img/groundfloor-apartment/groundfloor-apartment-2.jpg", description: "Ground Floor Apartment 2" },
+                { src: "assets/img/groundfloor-apartment/groundfloor-apartment-3.jpg", description: "Ground Floor Apartment 3" },
+                { src: "assets/img/groundfloor-apartment/groundfloor-apartment-4.jpg", description: "Ground Floor Apartment 4" },
+                { src: "assets/img/groundfloor-apartment/groundfloor-apartment-5.jpg", description: "Ground Floor Apartment 5" },
+                { src: "assets/img/groundfloor-apartment/groundfloor-apartment-6.jpg", description: "Ground Floor Apartment 6" },
+                { src: "assets/img/groundfloor-apartment/groundfloor-apartment-7.jpg", description: "Ground Floor Apartment 7" },
+                { src: "assets/img/groundfloor-apartment/groundfloor-apartment-8.jpg", description: "Ground Floor Apartment 8" },
+                // Add all ground floor apartment images here
+            ],
+            secondfloor: [
+                { src: "assets/img/secondfloor-apartment/secondfloor-apartment-1.jpg", description: "Second Floor Apartment 1" },
+                { src: "assets/img/secondfloor-apartment/secondfloor-apartment-2.jpg", description: "Second Floor Apartment 2" },
+                { src: "assets/img/secondfloor-apartment/secondfloor-apartment-3.jpg", description: "Second Floor Apartment 3" },
+                { src: "assets/img/secondfloor-apartment/secondfloor-apartment-4.jpg", description: "Second Floor Apartment 4" },
+                { src: "assets/img/secondfloor-apartment/secondfloor-apartment-5.jpg", description: "Second Floor Apartment 5" },
+                { src: "assets/img/secondfloor-apartment/secondfloor-apartment-6.jpg", description: "Second Floor Apartment 6" },
+                { src: "assets/img/secondfloor-apartment/secondfloor-apartment-7.jpg", description: "Second Floor Apartment 7" },
+                { src: "assets/img/secondfloor-apartment/secondfloor-apartment-8.jpg", description: "Second Floor Apartment 8" },
+                { src: "assets/img/secondfloor-apartment/secondfloor-apartment-9.jpg", description: "Second Floor Apartment 9" },
+                { src: "assets/img/secondfloor-apartment/secondfloor-apartment-10.jpg", description: "Second Floor Apartment 10" },
+                { src: "assets/img/secondfloor-apartment/secondfloor-apartment-11.jpg", description: "Second Floor Apartment 11" },
+                { src: "assets/img/secondfloor-apartment/secondfloor-apartment-12.jpg", description: "Second Floor Apartment 12" },
+                { src: "assets/img/secondfloor-apartment/secondfloor-apartment-13.jpg", description: "Second Floor Apartment 13" },
+                // Add all second floor apartment images here
+            ],
+            studio: [
+                { src: "assets/img/studio/studio-1.jpg", description: "Studio 1" },
+                { src: "assets/img/studio/studio-2.jpg", description: "Studio 2" },
+                { src: "assets/img/studio/studio-3.jpg", description: "Studio 3" },
+                { src: "assets/img/studio/studio-4.jpg", description: "Studio 4" },
+                { src: "assets/img/studio/studio-6.jpg", description: "Studio 6" },
+                { src: "assets/img/studio/studio-7.jpg", description: "Studio 7" },
+                { src: "assets/img/studio/studio-8.jpg", description: "Studio 8" },
+                { src: "assets/img/studio/studio-9.jpg", description: "Studio 9" },
+                // Add all studio images here
+            ]
+        };
 
-    // Open lightbox for the selected album
-    document.querySelectorAll(".album").forEach((album) => {
-        album.addEventListener("click", () => {
-            const albumName = album.getAttribute("data-album");
-            currentAlbum = albums[albumName];
-            currentIndex = 0;
-            openLightbox(currentAlbum[currentIndex]);
+        // Open lightbox for the selected album
+        document.querySelectorAll(".album").forEach((album) => {
+            album.addEventListener("click", () => {
+                const albumName = album.getAttribute("data-album");
+                currentAlbum = albums[albumName];
+                currentIndex = 0;
+                openLightbox(currentAlbum[currentIndex]);
+            });
         });
-    });
 
-    function openLightbox(image) {
-        const lightbox = document.getElementById("lightbox");
-        const lightboxImg = document.getElementById("lightbox-img");
-        const lightboxDescription = document.getElementById("lightbox-description");
+        function openLightbox(image) {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            const lightboxDescription = document.getElementById("lightbox-description");
 
-        lightbox.style.display = "flex";
-        lightboxImg.src = image.src;
-        lightboxDescription.textContent = image.description;
+            lightbox.style.display = "flex";
+            lightboxImg.src = image.src;
+            lightboxDescription.textContent = image.description;
 
-        document.addEventListener("keydown", handleKeyPress);
-    }
-
-    function changeImage(direction) {
-        currentIndex += direction;
-
-        if (currentIndex < 0) {
-            currentIndex = currentAlbum.length - 1;
-        } else if (currentIndex >= currentAlbum.length) {
-            currentIndex = 0;
+            document.addEventListener("keydown", handleKeyPress);
         }
 
-        const lightboxImg = document.getElementById("lightbox-img");
-        const lightboxDescription = document.getElementById("lightbox-description");
+        function changeImage(direction) {
+            currentIndex += direction;
 
-        lightboxImg.src = currentAlbum[currentIndex].src;
-        lightboxDescription.textContent = currentAlbum[currentIndex].description;
-    }
+            if (currentIndex < 0) {
+                currentIndex = currentAlbum.length - 1;
+            } else if (currentIndex >= currentAlbum.length) {
+                currentIndex = 0;
+            }
 
-    function closeLightbox() {
-        document.getElementById("lightbox").style.display = "none";
-        document.removeEventListener("keydown", handleKeyPress);
-    }
+            const lightboxImg = document.getElementById("lightbox-img");
+            const lightboxDescription = document.getElementById("lightbox-description");
 
-    function handleKeyPress(event) {
-        if (event.key === "ArrowRight") {
-            changeImage(1);
-        } else if (event.key === "ArrowLeft") {
-            changeImage(-1);
-        } else if (event.key === "Escape") {
-            closeLightbox();
+            lightboxImg.src = currentAlbum[currentIndex].src;
+            lightboxDescription.textContent = currentAlbum[currentIndex].description;
         }
-    }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+            document.removeEventListener("keydown", handleKeyPress);
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === "ArrowRight") {
+                changeImage(1);
+            } else if (event.key === "ArrowLeft") {
+                changeImage(-1);
+            } else if (event.key === "Escape") {
+                closeLightbox();
+            }
+        }
     </script>
 </body>
 
