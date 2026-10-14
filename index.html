@@ -708,7 +708,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Apartments Tzelepis – Chris House | <a href="#about">About</a> | <a
+        <p>&copy; <span id="current-year"></span> Apartments Tzelepis – Chris House | <a href="#about">About</a> | <a
                 href="#accommodation">Accommodation</a> | <a href="#pricing">Pricing</a> | <a
                 href="#contact">Contact</a></p>
     </footer>
@@ -837,6 +837,9 @@
                 closeLightbox();
             }
         }
+
+        // Automatically update the copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
 
